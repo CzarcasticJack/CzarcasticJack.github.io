@@ -1,0 +1,84 @@
+body{
+    background: #e5e5e5;
+    padding-top: 120px;
+    }
+
+.navbar-brand{
+    margin: -12px;
+    }
+    
+.follow{
+    margin: 7px;    
+    }   
+    
+.nav2{
+    margin-top: 50px;
+}
+
+.navbar-custom {
+    background-color: rgb(245,245,245);
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:black;
+}
+
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    font-weight: bold;
+    border-bottom-color: blue;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.navbar-custom .navbar-nav{
+    display: inline-block;
+    float: none;
+    }
+
+.navbar-custom .navbar-collapse{
+    text-align: center;
+    }
+    
+.userPic{
+    float: left;
+    margin: 5px 5px 5px 5px !important;
+    }
+
+.user{
+    font-weight: bold;
+    font-size: 14px;
+    }
+    
+.date{
+    font-size: 10px;
+    }
+
+.postBody{
+    clear:both;
+    margin: 5px 5px 5px 5px;
+    }
+
+.pluses, .shares{
+    display: inline-block;
+    margin: 5px 0px 5px 5px;
+    padding: 0px 3px;
+    border: solid 1px gray;
+    }
+    
+.comments{
+    background-color: #f5f5f5;
+    padding: 10px;
+    .user{
+        display: inline-block;
+        }
+    .date{
+        display: inline-block;
+        }
+    .postBody{
+        display: block;
+        }
+    input{
+        width: 100%;
+        color: gray;
+        }
+    }

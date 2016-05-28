@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html ng-app="gPlusApp">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+       
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+        <link rel="stylesheet" href="styles/main.css">
+        
+        <title>gPlus Template</title>
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+    </head>
+    
+    <body>
+        <div ng-controller="gPlusCtrl">
+            <nav class="navbar navbar-default navbar-fixed-top">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="#"><img src="assets/gplusicon.png" height="44" width="44"></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li><a href="#">Josh    |   <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a></li>
+                  </ul>
+                  
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a><strong>1,000</strong> followers | <strong>10,000</strong> views</a></li>
+                    <li class="follow"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span><span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Follow</button></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+            
+            <nav class="navbar navbar-custom navbar-fixed-top nav2">
+              <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li><a href="#">About</a></li>
+                    <li class="active"><a href="#">Posts</a></li>
+                    <li><a href="#">Photos</a></li>
+                    <li><a href="#">Videos</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+            
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    
+                    <div ng-repeat="post in posts" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="thumbnail">
+                            <img class="img-responsive userPic" ng-src="{{ post.userPic }}">
+                            <p class="user">{{ post.user }}</p>
+                            <p class="date"> {{ post.date }} </p>
+                            <p class="postBody"> {{ post.body }} </p>
+                            <p class="pluses"> <strong>+</strong> {{ post.pluses}}</p>
+                            <p class="shares"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> {{ post.shares }}</p>
+                            <div class="comments">
+                                <img class="img-responsive userPic" ng-src=" {{ post.commentUserPic }}" >
+                                <p class="user"> {{ post.commentUser }} </p>
+                                <p class="date"> {{ post.commentDate }} </p>
+                                <p class="postBody"> {{ post.commentBody }}</p>
+                                <input type="text" value="  Add a comment...">
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
+            </div>
+        </div>
+        <script src="scripts/gPlusApp.js"></script>
+        <script src="scripts/gPlusCtrl.js"></script>
+    </body>
+
+</html>
